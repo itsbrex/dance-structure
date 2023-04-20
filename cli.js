@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 'use strict';
-
 // file: cli.js
+
 
 const prompts = require('prompts');
 const { suggestedStructure, partsDefinition: PARTS } = require('./index');

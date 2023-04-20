@@ -2,13 +2,18 @@
 // file: index.js
 
 const PARTS = {
-  Intro: { weight: 1, even: false, spillRank: 4, balance: false },
+  Intro: { weight: 1, even: false, spillRank: 4, balance: true },
   Verse: { weight: 4, even: true, spillRank: 5, balance: true },
   Build: { weight: 2, even: true, spillRank: 6, balance: true },
   Drop: { weight: 3, even: true, spillRank: 7, balance: true },
   Breakdown: { weight: 2.5, even: true, spillRank: 1, balance: false },
-  Outro: { weight: 1, even: false, spillRank: 3, balance: false },
+  Outro: { weight: 1, even: false, spillRank: 3, balance: true },
 };
+
+// Add PreChorus and Bridge
+PARTS.PreChorus = { weight: 1.5, even: true, spillRank: 2, balance: true };
+PARTS.Bridge = { weight: 2, even: true, spillRank: 3, balance: true };
+
 
 const rankedEntries = Object.entries(PARTS).sort((a, b) => {
   return a[1].spillRank - b[1].spillRank;
