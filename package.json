@@ -1,7 +1,39 @@
 {
   "name": "dance-structure",
   "version": "1.0.0",
+  "description": "Quickly create suggested song structures from the command line",
   "main": "index.js",
-  "author": "Brian Roach <itsbrexnpm@gmail.com>",
-  "license": "MIT"
+  "scripts": {
+    "start": "node cli.js",
+    "test": "mvt -v"
+  },
+  "bin": {
+    "dance-structure": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsbrex/dance-structure.git"
+  },
+  "keywords": [
+    "music",
+    "song",
+    "structure",
+    "verse",
+    "chorus",
+    "bridge",
+    "dance music",
+    "edm",
+    "electronic",
+    "midi",
+    "ableton"
+  ],
+  "author": "Brian Roach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itsbrex/dance-structure/issues"
+  },
+  "homepage": "https://github.com/itsbrex/dance-structure#readme",
+  "dependencies": {
+    "prompts": "^2.4.1"
+  }
 }
