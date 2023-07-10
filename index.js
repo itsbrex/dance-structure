@@ -1,30 +1,19 @@
 'use strict';
 // file: index.js
 
-const PARTS = {
-	// Intro:    { weight: 1  , even: true, spillRank: 4, balance: true  },
-	// Verse:    { weight: 4  , even: true, spillRank: 5, balance: true  },
-	// Build:    { weight: 2  , even: true, spillRank: 6, balance: true  },
-	// Drop:     { weight: 3  , even: true, spillRank: 7, balance: true  },
-	// Break:    { weight: 2.5, even: true, spillRank: 1, balance: false },
-	// Break_sm: { weight: 3  , even: true, spillRank: 2, balance: false },
-	// Break_lg: { weight: 1  , even: true, spillRank: 1, balance: false },
-	// Outro:    { weight: 1  , even: true, spillRank: 3, balance: true  },
-	// const PARTS = {
-	Intro: { weight: 1, even: true, spillRank: 4, balance: false, color: 'Light Blue' },
-	Verse: { weight: 4, even: true, spillRank: 5, balance: true, color: 'Green' },
-	PreChorus: { weight: 2, even: true, spillRank: 2, balance: true, color: 'Light Purple' },
-	Chorus: { weight: 4, even: true, spillRank: 3, balance: true, color: 'Yellow' },
-	Bridge: { weight: 3, even: true, spillRank: 1, balance: true, color: 'Orange' },
-	Build: { weight: 2, even: true, spillRank: 6, balance: true, color: 'Red' },
-	Drop: { weight: 3, even: true, spillRank: 7, balance: true, color: 'Dark Blue' },
-	Breakdown: { weight: 2.5, even: true, spillRank: 1, balance: false, color: 'Orange' },
-	Outro: { weight: 1, even: false, spillRank: 3, balance: false, color: 'Light Gray' },
-	// };
-};
 
-// PARTS.PreChorus = { weight: 1.5, even: true, spillRank: 2, balance: true };
-// PARTS.Bridge = { weight: 2, even: true, spillRank: 3, balance: true };
+// prettier-ignore
+const PARTS = {
+  Intro:     { weight: 1,   even: true,  spillRank: 4, balance: false, color: 'Light Blue'   },
+  Verse:     { weight: 4,   even: true,  spillRank: 5, balance: true,  color: 'Green'        },
+  PreChorus: { weight: 2,   even: true,  spillRank: 2, balance: true,  color: 'Light Purple' },
+  Chorus:    { weight: 4,   even: true,  spillRank: 3, balance: true,  color: 'Yellow'       },
+  Bridge:    { weight: 3,   even: true,  spillRank: 1, balance: true,  color: 'Orange'       },
+  Build:     { weight: 2,   even: true,  spillRank: 6, balance: true,  color: 'Red'          },
+  Drop:      { weight: 3,   even: true,  spillRank: 7, balance: true,  color: 'Dark Blue'    },
+  Breakdown: { weight: 2.5, even: true,  spillRank: 1, balance: false, color: 'Orange'       },
+  Outro:     { weight: 1,   even: false, spillRank: 3, balance: false, color: 'Light Gray'   },
+};
 
 
 const rankedEntries = Object.entries(PARTS).sort((a, b) => {
