@@ -65,7 +65,7 @@ const main = async () => {
 
     const structure = [];
 
-    while (structure[structure.length - 1].part !== END) {
+    while (structure.length === 0 || structure[structure.length - 1].part !== END) {
       const hasParts = structure.length;
       const prefix = hasParts ? 'Next' : 'First';
       const suffix = hasParts && ` [${structure.map((p) => p.part).join(', ')}]`;
