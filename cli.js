@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-'use strict';
 
-// File: cli.js
+// cli.js
+
 
 const prompts = require('prompts');
 const { suggestedStructure, partsDefinition: PARTS } = require('./index');
@@ -21,7 +21,8 @@ const onStateUpdate = (state) => {
 const parseDuration = (input) => {
   const regex = /^(\d+[:m]\d+s?)|(\d+(\.\d+)?)$/;
   if (regex.test(input)) {
-    let minutes, seconds;
+    let minutes;
+    let seconds;
     if (input.includes(':')) {
       [minutes, seconds] = input.split(':').map(Number);
     } else if (input.includes('m') && input.includes('s')) {
@@ -95,11 +96,10 @@ const main = async () => {
 
     structure.pop();
 
-    suggestedStructure(structure, beats, bpMeasure).forEach((p) => {
-      const barText = p.measures && ` ${p.measures} bars`;
-      const append = [barText].filter(Boolean).join(',');
-      console.log(`${p.part.padEnd(10)}:${append.padStart(9)}`);
-    });
+    for (const p of suggestedStructure(structure, beats, bpMeasure)) {
+      const barText = p.measures ? ` ${p.measures} bars` : '';
+      console.log(`${p.part.padEnd(10)}:${barText.padStart(9)}`);
+    }
   } catch (err) {
     console.error(err);
     process.exit(1);
