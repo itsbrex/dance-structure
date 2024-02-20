@@ -2,38 +2,17 @@
   "name": "dance-structure",
   "version": "1.0.0",
   "description": "Quickly create suggested song structures from the command line",
-  "main": "index.js",
-  "scripts": {
-    "start": "node cli.js",
-    "test": "mvt -v"
-  },
-  "bin": {
-    "dance-structure": "cli.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/itsbrex/dance-structure.git"
-  },
-  "keywords": [
-    "music",
-    "song",
-    "structure",
-    "verse",
-    "chorus",
-    "bridge",
-    "dance music",
-    "edm",
-    "electronic",
-    "midi",
-    "ableton"
-  ],
+  "main": "index.ts",
+  "scripts": { "start": "bun cli.ts", "test": "mvt -v" },
+  "type": "module",
+  "devDependencies": { "@types/prompts": "^2.4.9", "bun-types": "latest" },
+  "peerDependencies": { "typescript": "^5.0.0" },
+  "bin": { "dance-structure": "cli.js" },
+  "repository": { "type": "git", "url": "git+https://github.com/itsbrex/dance-structure.git" },
+  "keywords": ["music", "song", "structure", "verse", "chorus", "bridge", "dance music", "edm", "electronic", "midi", "ableton"],
   "author": "Brian Roach",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/itsbrex/dance-structure/issues"
-  },
+  "bugs": { "url": "https://github.com/itsbrex/dance-structure/issues" },
   "homepage": "https://github.com/itsbrex/dance-structure#readme",
-  "dependencies": {
-    "prompts": "^2.4.1"
-  }
+  "dependencies": { "@clack/prompts": "^0.7.0", "prompts": "^2.4.2" }
 }
