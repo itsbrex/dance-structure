@@ -20,41 +20,18 @@ This tool can help you experiment with different song structures and give you a 
 
 2. Run the `cli.js` file in your terminal:
 
-   ```
+   ```shell
    node cli.js
    ```
 
-3. When prompted, input your desired song duration (in either `mm:ss`, `mmm:ss`, or decimal minutes format), BPM, and beats per measure. 
+3. When prompted, input your desired song duration (in either `mm:ss`, `mmm:ss`, or decimal minutes format), BPM, and beats per measure.
 
-4. The tool will then prompt you to select the different parts of your song structure. You can choose from Intro, Verse, Build, Drop, Break, and Outro. You can select as many parts as you like, and the tool will balance them based on their defined weights.
+4. The tool will then prompt you to select the different parts of your song structure. You can choose from `Intro`, `Verse`, `Build`, `Drop`, `Break`, and `Outro`. You can select as many parts as you like, and the tool will balance them based on their defined weights.
 
-5. Once you're done selecting parts, choose '(done)' to complete the process.
+5. Once you're done selecting parts, choose `(done)` to complete the process.
 
 6. The tool will print the suggested song structure to the console. Each line will include a part of the song, the suggested number of bars for that part, and the total beats for that part.
 
-## Contributing
-
-Contributions are welcome! If you have any improvements or features you'd like to add, feel free to make a pull request.
-
-## Contributors
-Contributions are welcomed. This project follows the all-contributors spec. ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/github/all-contributors/itsbrex/dance-structure?color=ee8449&style=flat-square)](#contributors)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 ## License
 
-MIT © [itsbrex](https://github.com/itsbrex)
-
-If you found this project interesting, please consider [sponsoring me](https://github.com/sponsors/itsbrex) or <a href="https://twitter.com/itsbrex">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
+MIT
